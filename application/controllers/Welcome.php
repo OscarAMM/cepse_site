@@ -5,7 +5,7 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->database();
+		$this->load->database();
 		$this->load->helper('url_helper');
 	}
 
@@ -26,9 +26,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		/*$this->load->model('Home');
+		/**Load the model*/
+		$this->load->model('Home');
+		/**use model functions */
 		$datas =  $this->Home->findAll();
-		var_dump($datas);*/
+
 		$this->load->view('index_cepse');
 	}
 
