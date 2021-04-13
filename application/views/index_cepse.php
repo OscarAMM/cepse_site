@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,10 +71,144 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h1 class="font-weight-bold text-uppercase">Unidad Estatal De Participación Social en la Educación</h1>
             </div>
             <div class="row d-flex justify-content-center">
-            
+                <div class="col">
+                    <h3 class="text-center text-monospace border-top border-bottom my-2">Bienvenidos a la página de la
+                        Unidad Estatal de Participación
+                        Escolar en la Eduación.</h3>
+                </div>
+            </div>
+            <!---- First section (General information) ---->
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4 order-md-1">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8 order-md-2">
+                    <h4 class="text-center">Something</h4>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
+                        explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
+                        fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
+                </div>
             </div>
         </div>
-        
+        <!-- Second section  (What they promove) --->
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col-md-4 order-md-2">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8 order-md-1">
+                <h4 class="text-center">Something</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
+                    explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
+                    fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
+            </div>
+        </div>
+        <!-- third section (CPEE) --->
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col-md-4 order-md-1">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8 order-md-2">
+                <h4 class="text-center">Something</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
+                    explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
+                    fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
+            </div>
+        </div>
+        <!-- Fourth section ---->
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col-md-4 order-md-1">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8 order-md-2">
+                <h4 class="text-center">Something</h4>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
+                    explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
+                    fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
+            </div>
+        </div>
+        <hr>
     </main>
     <footer>
         <div class="footer mt-auto py-3">
