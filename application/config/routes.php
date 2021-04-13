@@ -53,3 +53,5 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['Welcome/index_cepse']='index';
+/**Login route for public section*/
+$route[LOGIN_PAGE] = 'examples/login';
