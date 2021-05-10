@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Migration_create_file extends CI_Migration
+class Migration_create_notice extends CI_Migration
 {
 
     public function up()
