@@ -21,7 +21,7 @@ class Migration_create_legalframework extends CI_Migration
             ),
             'legal_content' => array(
                 'type' => 'LONGTEXT',
-                'null' => FASLE,
+                'null' => FALSE,
             ),
         ));
         $this->dbforge->add_key('lf_id', true);

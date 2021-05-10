@@ -21,7 +21,7 @@ class Migration_create_file extends CI_Migration
             ),
             'file_path' => array(
                 'type' => 'LONGTEXT',
-                'null' => FASLE,
+                'null' => FALSE,
             ),
         ));
         $this->dbforge->add_key('file_id', true);
