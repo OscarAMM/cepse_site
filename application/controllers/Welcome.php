@@ -30,8 +30,9 @@ class Welcome extends CI_Controller {
 		$this->load->model('Home');
 		/**use model functions */
 		$datas =  $this->Home->findAll();
-
-		$this->load->view('index_cepse');
+		$this->load->view('home_page/header');
+		$this->load->view('home_page/index');
+		$this->load->view('home_page/footer');
 	}
 
 }
