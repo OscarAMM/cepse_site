@@ -2,8 +2,8 @@
 class Home extends CI_Model
 {
     /**table and pk home table**/
-    public $table = 'home';
-    public $table_id = 'home_id';
+    public $table = 'home_content';
+    public $table_id = 'content_id';
 
     public function __construct()
     {
