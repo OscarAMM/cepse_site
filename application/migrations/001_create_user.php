@@ -29,8 +29,8 @@ class Migration_create_user extends CI_Migration {
                             'null' => FALSE
                         ),
                         'status' => array(
-                            'type' => 'TINYINT',
-                            'constraint'=> '1',
+                            'type' => 'VARCHAR',
+                            'constraint'=> '255',
                             'null' => FALSE
                         )
                 ));
