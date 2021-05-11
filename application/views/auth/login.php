@@ -60,8 +60,7 @@
                                             <input type="password" name="password" id="password" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-primary  btn-block">Iniciar
-                                                sesión</button>
+
                                         </div>
                                     </form>
                                 </div>
