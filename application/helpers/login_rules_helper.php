@@ -6,7 +6,7 @@ function getLoginRules()
             'field' => 'email',
             'label' => 'email',
             'rules' => 'required|valid_email|trim',
-            'errores' => array(
+            'errors' => array(
                 'required' => 'El %s no debe estar vacío',
                 'valid_email' => 'El %s debe ser válido',
             ),
