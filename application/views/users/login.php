@@ -30,19 +30,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url();?>Welcome/index">Inicio</a>
+                        <a class="nav-link" href="<?php echo base_url(); ?>Welcome/index">Inicio</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="container-fluid my-4">
-            <img src="<?php echo base_url();?>assets/img/logo_segey.jpeg" alt="logo segey" class="img-fluid"
+            <img src="<?php echo base_url(); ?>assets/img/logo_segey.jpeg" alt="logo segey" class="img-fluid"
                 width="450px">
             <div class="row justify-content-center">
                 <div class="card shadow mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-3">
-                            <img src="<?php echo base_url();?>assets/img/banner_login.jpg"  width="540px;" class="img-fluid" alt="banner_side">
+                            <img src="<?php echo base_url(); ?>assets/img/banner_login.jpg" width="540px;"
+                                class="img-fluid" alt="banner_side">
                         </div>
                         <div class="col-md-9">
                             <div class="card-body">
@@ -50,7 +51,7 @@
                                 <h5 class="card-title text-monospace">Unidad Estatal de Participación Social en la
                                     Educación</h5>
                                 <div>
-                                    <form action="<?php echo base_url();?>auth/login" method="post">
+                                    <form action="<?php echo base_url('Login/validate'); ?>" method="post">
                                         <div class="form-group">
                                             <label for="user">Usuario</label>
                                             <input type="text" name="identity" id="username" class="form-control">
@@ -60,7 +61,7 @@
                                             <input type="password" name="password" id="password" class="form-control">
                                         </div>
                                         <div class="form-group">
-
+                                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                                         </div>
                                     </form>
                                 </div>
