@@ -7,8 +7,7 @@ class Login extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Users');
-        $this->load->library('form_validation');
+        $this->load->library(array('form_validation', 'session'));
         $this->load->helper(array(
             'login_rules',
         ));
@@ -37,8 +36,16 @@ class Login extends CI_Controller
                 echo json_encode(array('msg' => 'Las credenciales no coinciden con ninguno registrado. Intente nuevamente.'));
                 $this->output->set_status_header(401);
                 exit;
-            }
-            echo json_encode(array('msg' => 'Bienvenido'));
+            } 
+            $data = array(
+                'user_id' => $response->user_id,
+                'range' => $response->range,
+                'status' => $response->status,
+                'username' => $response->username,
+                'is_logged' => TRUE,
+            );
+            $this->session->set_userdata($data);
+            echo json_encode(array("url" => base_url('dashboard')));
         }
     }
 }
