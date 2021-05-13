@@ -45,7 +45,14 @@ class Login extends CI_Controller
                 'is_logged' => TRUE,
             );
             $this->session->set_userdata($data);
+            $this->session->set_flashdata('msg', '¡Bienvenido al sistema' .$data['username']);
             echo json_encode(array("url" => base_url('dashboard')));
         }
+    }
+    public function logout(){
+        $data = array('user_id', 'range', 'status', 'username', 'is_logged');
+        $this->session->unset_userdata($data);
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }
