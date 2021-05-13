@@ -52,7 +52,7 @@
                                     Educación</h5>
                                 <div>
                                     <form action="<?php echo base_url('Login/validate'); ?>" method="post"
-                                        id="login_form">
+                                        id="frm-login">
                                         <div class="form-group" id="email_group">
                                             <label for="user">Usuario</label>
                                             <input type="text" name="email" id="email" class="form-control" required autocomplete="off">
