@@ -1,60 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"> </script>
-    <script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"> </script>
-    <!---Fontawesome--->
-    <script src="https://kit.fontawesome.com/8efbe29298.js" crossorigin="anonymous"></script>
-    <title>UEPSE | Registro</title>
-</head>
-
-<body>
-    <main role="main" class="flex-shrink-0">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card shadow-sm my-3">
-                        <div class="card-header border-0 bg-white text-center">
-                            <h1><i class="fas fa-user-plus"></i> Registro</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm my-3">
+                <div class="card-header border-0 bg-white text-center">
+                    <h1><i class="fas fa-user-plus"></i> Registro</h1>
+                </div>
+                <div class="card-body">
+                    <form action="<?php echo base_url('users/store'); ?>" method="post" autocomplete="off">
+                        <div class="form-group">
+                            <label for="username">Nombre de usuario <small style="color:red;">*</small></label>
+                            <input type="text" name="username" id="username" class="form-control" autocomplete="off"
+                                value="<?= set_value('username') ?>" required>
+                            <small style="color:red;"><?=form_error('username')?></small>
                         </div>
-                        <div class="card-body">
-                            <form action="<?php echo base_url('Register/store'); ?>" method="post">
-                                <div class="form-group">
-                                    <label for="username">Nombre de usuario</label>
-                                    <input type="text" name="username" id="username" class="form-control"
-                                        autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Correo</label>
-                                    <input type="email" name="email" id="email" class="form-control" autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Contraseña</label>
-                                    <input type="password" name="password" id="password" class="form-control"
-                                        autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <label for="password_c">Confirmar contraseña</label>
-                                    <input type="password" name="password_c" id="password_c" class="form-control"
-                                        autocomplete="off">
-                                </div>
-                                <a href="<?php echo base_url('Register/index')?>" class="btn btn-secondary">Regresar</a>
-                                <button type="submit" class="btn btn-success">Guardar</button>
-                            </form>
+                        <div class="form-group">
+                            <label for="email">Correo <small style="color:red;">*</small></label>
+                            <input type="email" name="email" id="email" class="form-control" autocomplete="off"
+                                value="<?= set_value('email') ?>" required>
+                            <small style="color:red;"><?= form_error('email')?></small>
                         </div>
-                    </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="password">Contraseña <small style="color:red;"></small></label>
+                                <input type="password" name="password" id="password" class="form-control"
+                                    autocomplete="off" required>
+                                <small style="color:red;"><?= form_error('password')?></small>
+                            </div>
+                            <div class="col">
+                                <label for="password_c">Confirmar contraseña <small style="color:red;">*</small></label>
+                                <input type="password" name="password_c" id="password_c" class="form-control"
+                                    autocomplete="off" required>
+                                <small style="color:red;"><?= form_error('password_c')?></small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="range">Perfil <small style="color:red;">*</small></label>
+                            <select name="range" id="range" class="form-control" required>
+                                <option value="">Seleccione un perfil</option>
+                                <option <?= set_value('range') == 'admin' ? 'selected' :''; ?> value="admin">
+                                    Administrador</option>
+                                <option <?= set_value('range') == 'user' ? 'selected' :''; ?> value="user">Usuario
+                                </option>
+                            </select>
+                            <small style="color:red;"><?= form_error('range')?></small>
+                        </div>
+                        <div class="form-group my-3">
+                            <a href="<?php echo base_url('register/index') ?>" class="btn btn-secondary">Regresar</a>
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </main>
-</body>
-
-</html>
+    </div>
+</div>
