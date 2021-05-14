@@ -45,7 +45,7 @@
                             <small style="color:red;"><?= form_error('range')?></small>
                         </div>
                         <div class="form-group my-3">
-                            <a href="<?php echo base_url('register/index') ?>" class="btn btn-secondary">Regresar</a>
+                            <a href="<?php echo base_url('users/index') ?>" class="btn btn-secondary">Regresar</a>
                             <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                     </form>
