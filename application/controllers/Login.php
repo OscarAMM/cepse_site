@@ -45,8 +45,8 @@ class Login extends CI_Controller
                 'is_logged' => TRUE,
             );
             $this->session->set_userdata($data);
-            $this->session->set_flashdata('msg', '¡Bienvenido al sistema' .$data['username']);
-            echo json_encode(array("url" => base_url('dashboard')));
+           // $this->session->set_flashdata('msg', '¡Bienvenido al sistema ' .$data['username'] .' !');
+            echo json_encode(array("url" => base_url('users/index')));
         }
     }
     public function logout(){
