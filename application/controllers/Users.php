@@ -6,11 +6,17 @@ class Users extends CI_Controller
     {
         parent::__construct();
         $this->load->library(array('session', 'form_validation'));
-        $this->load->helper('users/users_rules');
+        $this->load->helper(array('users/users_rules'));
+        $this->load->model('UserModel');
+        if (!$this->session->userdata('is_logged')) {
+            redirect('login');
+        }
     }
     public function index()
     {
-        $this->load->view('users/index');
+        $data = $this->UserModel->getUsers();
+        $this->getTemplate($this->load->view('users/index', array('data'=>$data),true));
+        
     }
     public function create()
     {
@@ -19,6 +25,7 @@ class Users extends CI_Controller
     }
     public function store()
     {
+        $rules = getUserRules();
         //form fields
         $username = $this->input->post('username');
         $email = $this->input->post('email');
@@ -27,25 +34,31 @@ class Users extends CI_Controller
         $range = $this->input->post('range');
         $view = $this->load->view('users/create', '', true);
         //validation rules (at helpers/users)
-        $this->form_validation->set_rules(getUserRules());
+        $this->form_validation->set_rules($rules);
         //verification at form action
         if ($this->form_validation->run() === false) {
-            ///
+            $this->output->set_status_header(500);
+            $view = $this->load->view('users/create', '', true);
+            $this->load->view('messages/error');
+            $this->getTemplate($view);
         } else {
             //user data session
             $user = array(
                 'username' => $username,
                 'email' => $email,
-                'password' => random_string('alnum', 10),
+                'password' => $password,
                 'range' => $range,
                 'status' => 'activo',
             );
-            //data session
-            $this->session->set_flashdata('msg', 'El usuario ha sido registrado con éxito.');
-            redirect(base_url('users/index'));
+            //insert data into users table
+            if (!$this->UserModel->save($user)) {
+                $this->output->set_status_header(500);
+            } else {
+                //data session
+                $message = $this->session->set_flashdata('msg', 'El usuario ha sido registrado con éxito.');
+                redirect(base_url('users/index'));
+            }
         }
-        //load view
-        $this->getTemplate($view);
     }
     public function getTemplate($view)
     {
