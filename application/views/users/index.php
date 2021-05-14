@@ -26,7 +26,7 @@
         <div class="container">
             <div class="btn-group">
                 <a href="<?php echo base_url('Welcome')?>" class="btn btn-sm btn-secondary">Regresar</a>
-                <a href="<?php echo base_url('Register/create')?>" class="btn btn-sm btn-primary"><i
+                <a href="<?php echo base_url('users/create')?>" class="btn btn-sm btn-primary"><i
                         class="fas fa-user-plus"></i> Crear
                     usuario</a>
             </div>
