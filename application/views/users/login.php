@@ -51,7 +51,7 @@
                                 <h5 class="card-title text-monospace">Unidad Estatal de Participación Social en la
                                     Educación</h5>
                                 <div>
-                                    <form action="<?php echo base_url('Login/validate'); ?>" method="post"
+                                    <form action="<?php echo base_url('login/validate'); ?>" method="post"
                                         id="frm-login">
                                         <div class="form-group" id="email_group">
                                             <label for="user">Usuario</label>
