@@ -36,20 +36,26 @@ class Login extends CI_Controller
                 echo json_encode(array('msg' => 'Las credenciales no coinciden con ninguno registrado. Intente nuevamente.'));
                 $this->output->set_status_header(401);
                 exit;
-            } 
+            }
             $data = array(
                 'user_id' => $response->user_id,
                 'range' => $response->range,
                 'status' => $response->status,
                 'username' => $response->username,
-                'is_logged' => TRUE,
+                'is_logged' => true,
             );
             $this->session->set_userdata($data);
-           // $this->session->set_flashdata('msg', '¡Bienvenido al sistema ' .$data['username'] .' !');
-            echo json_encode(array("url" => base_url('users/index')));
+            // $this->session->set_flashdata('msg', '¡Bienvenido al sistema ' .$data['username'] .' !');
+            if ($this->session->range === 'admin') {
+                echo json_encode(array("url" => base_url('users/index')));
+            } else {
+                echo json_encode(array("url" => base_url('welcome')));
+            }
+
         }
     }
-    public function logout(){
+    public function logout()
+    {
         $data = array('user_id', 'range', 'status', 'username', 'is_logged');
         $this->session->unset_userdata($data);
         $this->session->sess_destroy();
