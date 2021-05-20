@@ -1,4 +1,37 @@
 <?php
+if (!function_exists('getUpdateUserRules')) {
+    function getUpdateUserRules()
+    {
+        return array(
+            array(
+                'field' => 'username',
+                'label' => 'Nombre de usuario',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => 'El campo %s no debe estar vacío',
+                ),
+            ),
+            array(
+                'field' => 'email',
+                'label' => 'Correo',
+                'rules' => 'required|valid_email|trim',
+                'errors' => array(
+                    'required' => 'El campo %s no debe estar vacío',
+                    'valid_email' => 'El %s debe ser válido',
+                    'is_unique' => 'El %s debe ser único. Ya se encuentra registrado dicho correo.',
+                ),
+            ),
+            array(
+                'field' => 'range',
+                'label' => 'Perfil',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => 'El campo %s no debe estar vacío.',
+                ),
+            ),
+        );
+    }
+}
 if (!function_exists('getUserRules')) {
     function getUserRules()
     {
