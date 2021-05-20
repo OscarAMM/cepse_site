@@ -45,7 +45,7 @@
                                     <td><?= $item->range?></td>
                                     <td col="3">
                                         <div class="btn-group">
-                                        <a href="#" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-user-edit"></i></a>
+                                        <a href="<?php echo base_url('users/edit/'.$item->user_id)?>" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-user-edit"></i></a>
                                         <a href="#" class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-user-times"></i></a>
                                         </div>
                                     </td>
@@ -53,6 +53,7 @@
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
+                        <?php echo $this->pagination->create_links(); ?>
                     </div>
                 </div>
             </div>
