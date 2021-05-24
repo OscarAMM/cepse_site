@@ -135,6 +135,44 @@ class Users extends CI_Controller
             show_404();
         }
     }
+    public function profile($id)
+    {
+        $view = $this->load->view('users/profile', '', true);
+        $this->getTemplate($view);
+    }
+    public function update_profile($id){
+        if ($this->input->server('REQUEST_METHOD') === 'POST') {
+            $user = $this->UserModel->getUser($id);
+            $rules = getUpdateUserRules();
+            /**
+             * Form fields inputs
+             */
+            $username = $this->input->post('username');
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+            $view = $this->load->view('users/profile', '', true);
+            //validation rules (at helpers/users)
+            $this->form_validation->set_rules($rules);
+            if ($this->form_validation->run() === false) {
+                $this->output->set_status_header(500);
+                $view = $this->load->view('users/profile', array('user' => $user), true);
+                $this->getTemplate($view);
+            } else {
+                //user data session
+                $user = array(
+                    'username' => $username,
+                    'email' => $email,
+                    'range' => $range,
+                    'status' => 'activo',
+                );
+                $this->UserModel->updateUser($id, $user);
+                $this->session->set_flashdata('msg', 'Su perfil ' . $username . ' ha sido actualizado correctamente.');
+                redirect('users');
+            }
+        } else {
+            show_404();
+        }
+    }
     public function getTemplate($view)
     {
         $data = array(
