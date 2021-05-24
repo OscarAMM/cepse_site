@@ -1,8 +1,35 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse vh-100">
+<style>
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    padding: 48px 0 0;
+    /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+</style>
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse ">
+    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+        <span>Secciones</span><a class="d-flex align-items-center text-muted" href="#"
+            aria-label="Add a new report"><span data-feather="plus-circle"></span></a>
+    </h6>
     <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link dashboard-link href=" #"><span
-                        data-feather="home"></span>Inicio<span class="sr-only">(current)</span></a>
+            <li class="nav-item"><a class="nav-link dashboard-link" href="<?php echo base_url('welcome') ?>"><span data-feather="home"></span><i
+                        class="fas fa-home"></i> Inicio<span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -20,8 +47,8 @@
                 <div class="collapse" id="content_collapse">
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a href="<?php echo base_url()?>"
-                                class="nav-link dashboard-link ml-3"><i class="fas fa-cog"></i> Gestionar contenido</a>
+                            <a href="<?php echo base_url('content/index')?>" class="nav-link dashboard-link ml-3"><i
+                                    class="fas fa-cog"></i> Gestionar contenido</a>
                         </li>
                     </ul>
                 </div>
@@ -35,8 +62,8 @@
                 <div class="collapse" id="users_list_collapse">
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a href="<?php echo base_url('users/index')?>"
-                                class="nav-link dashboard-link ml-3"><i class="fas fa-users-cog"></i> Gestionar usuarios</a>
+                            <a href="<?php echo base_url('users/index')?>" class="nav-link dashboard-link ml-3"><i
+                                    class="fas fa-users-cog"></i> Gestionar usuarios</a>
                         </li>
                     </ul>
                 </div>
@@ -50,7 +77,8 @@
                 <div class="collapse" id="user_collapse">
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a href="<?php echo base_url('users/profile/'. $this->session->user_id)?>" class="nav-link dashboard-link ml-3"><i class="fas fa-user"></i>
+                            <a href="<?php echo base_url('users/profile/'. $this->session->user_id)?>"
+                                class="nav-link dashboard-link ml-3"><i class="fas fa-user"></i>
                                 <?=$this->session->username?></a>
                         </li>
                         <li class="nav-item">
