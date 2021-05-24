@@ -137,19 +137,19 @@ class Users extends CI_Controller
     }
     public function profile($id)
     {
-        $view = $this->load->view('users/profile', '', true);
+        $user = $this->UserModel->getUser($id);
+        $view = $this->load->view('users/profile', array('user' => $user), true);
         $this->getTemplate($view);
     }
     public function update_profile($id){
         if ($this->input->server('REQUEST_METHOD') === 'POST') {
             $user = $this->UserModel->getUser($id);
-            $rules = getUpdateUserRules();
+            $rules = getUserProfile();
             /**
              * Form fields inputs
              */
             $username = $this->input->post('username');
             $email = $this->input->post('email');
-            $password = $this->input->post('password');
             $view = $this->load->view('users/profile', '', true);
             //validation rules (at helpers/users)
             $this->form_validation->set_rules($rules);
@@ -162,12 +162,39 @@ class Users extends CI_Controller
                 $user = array(
                     'username' => $username,
                     'email' => $email,
-                    'range' => $range,
-                    'status' => 'activo',
                 );
                 $this->UserModel->updateUser($id, $user);
-                $this->session->set_flashdata('msg', 'Su perfil ' . $username . ' ha sido actualizado correctamente.');
-                redirect('users');
+                $this->session->set_flashdata('msg', 'Su perfil ha sido actualizado correctamente.');
+                redirect('users/profile/'.$this->session->user_id);
+            }
+        } else {
+            show_404();
+        }
+    }
+    public function update_password($id){
+        if ($this->input->server('REQUEST_METHOD') === 'POST') {
+            $user = $this->UserModel->getUser($id);
+            $rules = getUserPassword();
+            /**
+             * Form fields inputs
+             */
+            $password = $this->input->post('password');
+            $confirm_password = $this->input->post('confirm_password');
+            $view = $this->load->view('users/profile', '', true);
+            //validation rules (at helpers/users)
+            $this->form_validation->set_rules($rules);
+            if ($this->form_validation->run() === false) {
+                $this->output->set_status_header(500);
+                $view = $this->load->view('users/profile', array('user' => $user), true);
+                $this->getTemplate($view);
+            } else {
+                //user data session
+                $user = array(
+                    'password' => $password,
+                );
+                $this->UserModel->updateUser($id, $user);
+                $this->session->set_flashdata('msg', 'Su contraseña ha sido actualizado correctamente.');
+                redirect('users/profile/'.$this->session->user_id);
             }
         } else {
             show_404();
