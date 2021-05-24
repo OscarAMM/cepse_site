@@ -41,7 +41,9 @@ class Login extends CI_Controller
                 'user_id' => $response->user_id,
                 'range' => $response->range,
                 'status' => $response->status,
+                'email' => $response->email,
                 'username' => $response->username,
+                'password' => $response->password,
                 'is_logged' => true,
             );
             $this->session->set_userdata($data);
