@@ -1,14 +1,13 @@
-<div class="jumbotron text-center">
-    <h1 class="display-4 text-monospace text-uppercase">Usuarios</h1>
-    <p class="lead">Se listan los usuarios del sitio de la Unidad Estatal de Participación Social en la Eduación
-    </p>
-</div>
 <div class="container">
-    <div class="btn-group">
+    <div class="text-left mt-3">
+        <h1 class="display-4 text-monospace">Usuarios</h1>
+        <p class="text-muted lead">Se listan los usuarios del sitio de la Unidad Estatal de Participación Social en la Eduación
+        </p>
         <a href="<?php echo base_url('Welcome')?>" class="btn btn-sm btn-secondary">Regresar</a>
         <a href="<?php echo base_url('users/create')?>" class="btn btn-sm btn-primary"><i class="fas fa-user-plus"></i>
             Crear
             usuario</a>
+
     </div>
     <!-- Success message flashdata -->
     <?php  if($this->session->flashdata('msg')): ?>
@@ -26,8 +25,8 @@
                 <div class="card-body">
                     <h3>Usuarios registrados</h3>
                     <div class="table-responsive">
-                        <table class="table table-sm text-center">
-                            <thead class="thead-dark">
+                        <table class="table table-sm text-center table-striped">
+                            <thead class="bg-secondary text-white">
                                 <tr>
                                     <th>Id</th>
                                     <th>Nombre usuario</th>
@@ -44,10 +43,13 @@
                                     <td><?= $item->email?></td>
                                     <td><?= $item->range?></td>
                                     <td col="3">
-                                        <div class="btn-group">
-                                        <a href="<?php echo base_url('users/edit/'.$item->user_id)?>" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-user-edit"></i></a>
-                                        <a href="#" class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-user-times"></i></a>
-                                        </div>
+
+                                        <a href="<?php echo base_url('users/edit/'.$item->user_id)?>"
+                                            class="btn btn-sm btn-warning" title="Editar"><i
+                                                class="fas fa-user-edit"></i></a>
+                                        <a href="#" class="btn btn-sm btn-danger" title="Eliminar"><i
+                                                class="fas fa-user-times"></i></a>
+
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
