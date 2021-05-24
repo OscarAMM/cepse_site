@@ -11,6 +11,22 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <?php if ($this->session->range === 'admin'): ?>
+            <!--- content --->
+            <li class="nav-item">
+                <a class="nav-link dashboard-link" data-toggle="collapse" href="#content_collapse" role="button"
+                    aria-expanded="false" aria-controls="content_collapse">
+                    <i class="fas fa-folder"></i> Contenido <i class="fas fa-caret-down mt-1 float-right"></i>
+                </a>
+                <div class="collapse" id="content_collapse">
+                    <ul class="list-unstyled">
+                        <li class="nav-item">
+                            <a href="<?php echo base_url()?>"
+                                class="nav-link dashboard-link ml-3"><i class="fas fa-cog"></i> Gestionar contenido</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!--- users --->
             <li class="nav-item">
                 <a class="nav-link dashboard-link" data-toggle="collapse" href="#users_list_collapse" role="button"
                     aria-expanded="false" aria-controls="users_list_collapse">
@@ -19,7 +35,8 @@
                 <div class="collapse" id="users_list_collapse">
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a href="<?php echo base_url('users/index')?>" class="nav-link dashboard-link ml-3">Gestionar usuarios</a>
+                            <a href="<?php echo base_url('users/index')?>"
+                                class="nav-link dashboard-link ml-3"><i class="fas fa-users-cog"></i> Gestionar usuarios</a>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +50,7 @@
                 <div class="collapse" id="user_collapse">
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a href="#" class="nav-link dashboard-link ml-3"><i class="fas fa-user"></i>
+                            <a href="<?php echo base_url('users/profile/'. $this->session->user_id)?>" class="nav-link dashboard-link ml-3"><i class="fas fa-user"></i>
                                 <?=$this->session->username?></a>
                         </li>
                         <li class="nav-item">
