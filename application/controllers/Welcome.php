@@ -5,7 +5,8 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->database();
+		$this->load->library(array('session', 'form_validation', 'pagination'));
+		$this->load->model('ContentModel');
 		$this->load->helper('url_helper');
 	}
 
@@ -26,12 +27,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		/**Load the model*/
-		$this->load->model('Home');
+		
 		/**use model functions */
-		$datas =  $this->Home->findAll();
+		$data = $this->ContentModel->getInfo();
 		$this->load->view('home_page/header');
-		$this->load->view('home_page/index');
+		$this->load->view('home_page/index', array('data' => $data), false);
 		$this->load->view('home_page/footer');
 	}
 
