@@ -61,10 +61,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                 </div>
                 <div class="col-md-8 order-md-2">
-                    <h4 class="text-center">Something</h4>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
-                        explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
-                        fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
+                <?php foreach($data as $item): ?>
+                    <h4 class="text-center"><?= $item->title_one?></h4>
+                    <p class="text-center"><?= $item->paragraph_one?></p>
+                <?php endforeach;?>
                 </div>
             </div>
             <!-- Second section  (What they promove) --->
@@ -95,44 +95,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                 </div>
                 <div class="col-md-8 order-md-1">
-                    <h4 class="text-center">Something</h4>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
-                        explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
-                        fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
-                </div>
-            </div>
-            <!-- third section (CPEE) --->
-            <div class="row d-flex justify-content-center my-2">
-                <div class="col-md-4 order-md-1">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-8 order-md-2">
-                    <h4 class="text-center">Something</h4>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
-                        explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
-                        fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
+                <?php foreach($data as $item): ?>
+                    <h4 class="text-center"><?= $item->title_two?></h4>
+                    <p class="text-center"><?= $item->paragraph_two?></p>
+                <?php endforeach;?>
                 </div>
             </div>
             <!-- Fourth section ---->
@@ -163,10 +129,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                 </div>
                 <div class="col-md-8 order-md-2">
-                    <h4 class="text-center">Something</h4>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vel tenetur
-                        explicabo consequatur, quod temporibus deserunt rerum laudantium laboriosam error corporis,
-                        fugit quo sequi mollitia cupiditate itaque suscipit veritatis! Dolorum.</p>
+                <?php foreach($data as $item): ?>
+                    <h4 class="text-center"><?= $item->title_three?></h4>
+                    <p class="text-center"><?= $item->paragraph_three?></p>
+                <?php endforeach;?>
                 </div>
             </div>
             <hr>

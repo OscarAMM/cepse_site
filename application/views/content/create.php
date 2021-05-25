@@ -19,7 +19,7 @@
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="<?php echo base_url('content/store')?>" method="POST">
                         <h6 class="card-title border-bottom"><i class="fas fa-bookmark" style="color:#CDC252;"></i>
                             Primera sección</h6>
                         <div class="form-group row">
@@ -61,7 +61,7 @@
                         <div class="form-group row">
                             <label for="third_paragraph" class="col-sm-2 col-form-label">Párrafo</label>
                             <div class="col-sm-10">
-                                <textarea name="paragrpah_three" id="third_paragraph" cols="30" rows="10"
+                                <textarea name="paragraph_three" id="third_paragraph" cols="30" rows="10"
                                     class="form-control"></textarea>
                             </div>
                         </div>
