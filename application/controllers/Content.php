@@ -68,27 +68,71 @@ class Content extends CI_Controller
             //set validation rules before insertion
             $this->form_validation->set_rules($rules);
             //verification at rules. false = return to create view / true insert into db
-            if($this->form_validation->run() === false){
+            if ($this->form_validation->run() === false) {
                 $this->output->set_status_header(500);
                 $view = $this->load->view('content/create', '', true);
                 $this->getTemplate($view);
-            }else{
+            } else {
                 $content = array(
                     'title_one' => $title_one,
                     'title_two' => $title_two,
                     'title_three' => $title_three,
                     'paragraph_one' => $paragraph_one,
                     'paragraph_two' => $paragraph_two,
-                    'paragraph_three' => $paragraph_three
+                    'paragraph_three' => $paragraph_three,
                 );
-                if(!$this->ContentModel->insert($content)){
+                if (!$this->ContentModel->insert($content)) {
                     $this->output->set_status_header(500);
-                }else{
+                } else {
                     $message = $this->session->set_flashdata('msg', 'El contenido ha sido agregado con éxito.');
                     redirect(base_url('content/index'));
                 }
             }
-        }else{
+        } else {
+            show_404();
+        }
+    }
+    public function edit($id)
+    {
+        $data = $this->ContentModel->getContentInfo($id);
+        $view = $this->load->view('content/edit', array('data' => $data), true);
+        $this->getTemplate($view);
+    }
+    public function update($id)
+    {
+        if ($this->input->server('REQUEST_METHOD') === 'POST') {
+            //helper rules
+            $rules = getContentRules();
+            //form fields
+            $title_one = $this->input->post('title_one');
+            $title_two = $this->input->post('title_two');
+            $title_three = $this->input->post('title_three');
+            $paragraph_one = $this->input->post('paragraph_one');
+            $paragraph_two = $this->input->post('paragraph_two');
+            $paragraph_three = $this->input->post('paragraph_three');
+            //set validation rules before insertion
+            $this->form_validation->set_rules($rules);
+            //verification at rules. false = return to create view / true insert into db
+            if ($this->form_validation->run() === false) {
+                $this->output->set_status_header(500);
+                $view = $this->load->view('content/edit/' . $id, '', true);
+                $this->getTemplate($view);
+            } else {
+                $content = array(
+                    'title_one' => $title_one,
+                    'title_two' => $title_two,
+                    'title_three' => $title_three,
+                    'paragraph_one' => $paragraph_one,
+                    'paragraph_two' => $paragraph_two,
+                    'paragraph_three' => $paragraph_three,
+                );
+
+                $this->ContentModel->updateContent($id, $content);
+                $message = $this->session->set_flashdata('msg', 'El contenido ha sido actualizado con éxito.');
+                redirect(base_url('content/index'));
+
+            }
+        } else {
             show_404();
         }
     }
