@@ -25,7 +25,8 @@
                     Nosotros
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Programas</a>
+                    <a href="<?php echo base_url('welcome/aboutus');?>" class="dropdown-item"><i class="fas fa-info-circle"></i> Sobre nosotros</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-clipboard-list"></i> Programas</a>
                     <a class="dropdown-item" href="#"><i class="fas fa-users"></i> Directorio</a>
                 </div>
             </li>

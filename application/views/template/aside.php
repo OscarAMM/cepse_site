@@ -28,8 +28,9 @@
     </h6>
     <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link dashboard-link" href="<?php echo base_url('welcome') ?>"><span data-feather="home"></span><i
-                        class="fas fa-home"></i> Inicio<span class="sr-only">(current)</span></a>
+            <li class="nav-item"><a class="nav-link dashboard-link" href="<?php echo base_url('welcome') ?>"><span
+                        data-feather="home"></span><i class="fas fa-home"></i> Inicio<span
+                        class="sr-only">(current)</span></a>
             </li>
         </ul>
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -48,7 +49,10 @@
                     <ul class="list-unstyled">
                         <li class="nav-item">
                             <a href="<?php echo base_url('content/index')?>" class="nav-link dashboard-link ml-3"><i
-                                    class="fas fa-cog"></i> Gestionar contenido</a>
+                                    class="fas fa-cog"></i> Gestionar contenido principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('about/index')?>" class="nav-link dashboard-link ml-3"><i class="fas fa-question-circle"></i> Gestionar nosotros</a>
                         </li>
                     </ul>
                 </div>
