@@ -18,7 +18,7 @@
                     <h1 class="h1 text-muted">Registro</h1>
                 </div>
                 <div class="card-body">
-                    <form action="<?php echo base_url('users/store'); ?>" method="post" autocomplete="off">
+                    <form action="<?php echo base_url('c_users/store'); ?>" method="post" autocomplete="off">
                         <div class="form-group row">
                             <label for="username" class="col-sm-2 col-form-label">Nombre<small
                                     style="color:red;">*</small></label>

@@ -9,12 +9,12 @@
     </div>
     <!-- End success message flashdata -->
     <?php endif; ?>
-    <h5 class="text-left text-muted my-3">Contenido principal</h5>
+    <h5 class="text-left text-muted my-3"><i class="fas fa-file-alt" style="color:#603F8B;"></i> Contenido principal</h5>
     <div class="justify-content-center">
         <div class="card">
             <div class="card-body">
                 <?php if(count($data) == 0):?>
-                <a href="<?php echo base_url('content/create')?>" class="btn btn-sm btn-primary my-3"><i
+                <a href="<?php echo base_url('c_content/create')?>" class="btn btn-sm btn-primary my-3"><i
                         class="fas fa-plus-circle"></i> <i class="fas fa-plus-circle"></i> Agregar contenido</a>
                 <?php endif;?>
                 <div class="row">
@@ -33,7 +33,7 @@
                                 <h6 class="h6 text-muted">Tercera sección</h6>
                                 <h5 class="h5 card-title"><?= $item->title_three?></h5>
                                 <p class="card-text text-justify"><?= $item->paragraph_three?></p>
-                                <a href="<?php echo base_url('content/edit/'.$item->content_id) ?>"
+                                <a href="<?php echo base_url('c_content/edit/'.$item->content_id) ?>"
                                     class="btn btn-sm btn-warning mb-3"><i class="fas fa-edit"></i> Editar contenido</a>
                             </div>
                         </div>

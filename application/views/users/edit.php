@@ -18,7 +18,7 @@
                     <h1><i class="fas fa-user-edit"></i>Edición de datos</h1>
                 </div>
                 <div class="card-body">
-                    <form action="<?php echo base_url('users/update/' . $user->user_id); ?>" method="post"
+                    <form action="<?php echo base_url('c_users/update/' . $user->user_id); ?>" method="post"
                         autocomplete="off">
                         <div class="form-group">
                             <label for="username">Nombre de usuario <small style="color:red;">*</small></label>
@@ -45,7 +45,7 @@
                             <small style="color:red;"><?=form_error('range')?></small>
                         </div>
                         <div class="form-group my-3">
-                            <a href="<?php echo base_url('users/index') ?>" class="btn btn-secondary">Regresar</a>
+                            <a href="<?php echo base_url('c_users/index') ?>" class="btn btn-secondary">Regresar</a>
                             <button type="submit" class="btn btn-success">Actualizar</button>
                         </div>
                     </form>

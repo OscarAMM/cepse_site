@@ -19,7 +19,7 @@
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form action="<?php echo base_url('about/store') ?>" method="POST">
+                    <form action="<?php echo base_url('c_about/store') ?>" method="POST">
                         <div class="form-group row">
                             <label for="objective" class="col-sm-2 col-form-label">Título uno</label>
                             <div class="col-sm-10">

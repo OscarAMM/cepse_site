@@ -48,11 +48,15 @@
                 <div class="collapse" id="content_collapse">
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a href="<?php echo base_url('content/index')?>" class="nav-link dashboard-link ml-3"><i
+                            <a href="<?php echo base_url('c_content/index')?>" class="nav-link dashboard-link ml-3"><i
                                     class="fas fa-cog"></i> Gestionar contenido principal</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url('about/index')?>" class="nav-link dashboard-link ml-3"><i class="fas fa-question-circle"></i> Gestionar nosotros</a>
+                            <a href="<?php echo base_url('c_about/index')?>" class="nav-link dashboard-link ml-3"><i
+                                    class="fas fa-question-circle"></i> Gestionar nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('c_directory/index')?>" class="nav-link dashboard-link ml-3"><i class="fas fa-users"></i> Gestionar directorio</a>
                         </li>
                     </ul>
                 </div>
@@ -66,7 +70,7 @@
                 <div class="collapse" id="users_list_collapse">
                     <ul class="list-unstyled">
                         <li class="nav-item">
-                            <a href="<?php echo base_url('users/index')?>" class="nav-link dashboard-link ml-3"><i
+                            <a href="<?php echo base_url('c_users/index')?>" class="nav-link dashboard-link ml-3"><i
                                     class="fas fa-users-cog"></i> Gestionar usuarios</a>
                         </li>
                     </ul>

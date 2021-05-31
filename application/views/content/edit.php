@@ -29,7 +29,7 @@
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form action="<?php echo base_url('content/update/' . $data->content_id) ?>" method="POST">
+                    <form action="<?php echo base_url('c_content/update/' . $data->content_id) ?>" method="POST">
                         <h6 class="card-title border-bottom"><i class="fas fa-bookmark" style="color:#CDC252;"></i>
                             Primera sección</h6>
                         <div class="form-group row">

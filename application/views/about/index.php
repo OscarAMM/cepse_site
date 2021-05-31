@@ -9,12 +9,12 @@
     </div>
     <!-- End success message flashdata -->
     <?php endif;?>
-    <h5 class="text-left text-muted my-3">Sobre nosotros</h5>
+    <h5 class="text-left text-muted my-3"><i class="fas fa-info-circle " style="color:#603F8B;"></i> Contenido "Nosotros"</h5>
     <div class="justify-content-center">
         <div class="card my-3">
             <div class="card-body">
                 <?php if (!count($data) > 0): ?>
-                <a href="<?php echo base_url('about/create') ?>" class="btn btn-sm btn-primary"><i
+                <a href="<?php echo base_url('c_about/create') ?>" class="btn btn-sm btn-primary"><i
                         class="fas fa-plus-circle"></i> Agregar contenido</a>
                 <?php endif;?>
                 <div class="row">
@@ -23,7 +23,7 @@
                             <div class="card-body">
                                 <?php foreach ($data as $item): ?>
                                 <div class="text-right my-2">
-                                    <a href="<?php echo base_url('about/edit/'.$item->about_id)?>"
+                                    <a href="<?php echo base_url('c_about/edit/'.$item->about_id)?>"
                                         class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Editar
                                         contenido</a>
                                 </div>

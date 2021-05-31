@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class Content extends CI_Controller
+class C_Content extends CI_Controller
 {
     public function __construct()
     {
@@ -85,7 +85,7 @@ class Content extends CI_Controller
                     $this->output->set_status_header(500);
                 } else {
                     $message = $this->session->set_flashdata('msg', 'El contenido ha sido agregado con éxito.');
-                    redirect(base_url('content/index'));
+                    redirect(base_url('c_content/index'));
                 }
             }
         } else {
@@ -129,7 +129,7 @@ class Content extends CI_Controller
 
                 $this->ContentModel->updateContent($id, $content);
                 $message = $this->session->set_flashdata('msg', 'El contenido ha sido actualizado con éxito.');
-                redirect(base_url('content/index'));
+                redirect(base_url('c_content/index'));
 
             }
         } else {

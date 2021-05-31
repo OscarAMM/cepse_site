@@ -7,7 +7,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?php echo base_url('users/update_password/'.$this->session->user_id)?>" method="POST">
+            <form action="<?php echo base_url('c_users/update_password/'.$this->session->user_id)?>" method="POST">
                 <div class="modal-body">
                     <div class="form-group row">
                         <label for="password" class="col-sm-3 col-form-label">Nueva contraseña</label>

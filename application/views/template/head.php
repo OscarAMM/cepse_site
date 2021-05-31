@@ -14,8 +14,8 @@
     </script>
     <!---Fontawesome--->
     <script src="https://kit.fontawesome.com/8efbe29298.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico'); ?>" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/dashboard-style.css') ?>">
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico'); ?>" type="image/x-icon">
     <style>
     .bd-placeholder-img {
         font-size: 1.125rem;

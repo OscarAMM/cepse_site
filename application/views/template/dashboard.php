@@ -1,5 +1,5 @@
+<?= $head?>
 <body>
-    <?= $head?>
     <?= $nav?>
     <div class="container-fluid">
         <div class="row">

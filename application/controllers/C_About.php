@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class About extends CI_Controller
+class C_About extends CI_Controller
 {
     public function __construct()
     {
@@ -64,7 +64,7 @@ class About extends CI_Controller
                     $this->output->set_status->header(500);
                 } else {
                     $message = $this->session->set_flashdata('msg', 'Se ha agregado con éxito la información');
-                    redirect(base_url('about/index'));
+                    redirect(base_url('c_about/index'));
                 }
             }
         } else {
@@ -105,7 +105,7 @@ class About extends CI_Controller
                 );
                 $this->AboutModel->updateInfoAbout($id, $data);
                 $message = $this->session->set_flashdata('msg', 'Se ha agregado con éxito la información');
-                redirect(base_url('about/index'));
+                redirect(base_url('c_about/index'));
             }
         } else {
             shos_404();

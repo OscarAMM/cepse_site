@@ -33,7 +33,7 @@
                     <div class="card-body">
                         <h4 class="card-title"><i class="fas fa-user-astronaut fa-2x" style="color:#603F8B;"></i> Mi
                             perfil</h4>
-                        <form action="<?php echo base_url('users/update_profile/'.$user->user_id); ?>"
+                        <form action="<?php echo base_url('c_users/update_profile/'.$user->user_id); ?>"
                             method="POST">
                             <div class="form-group row">
                                 <label for="username" class="col-sm-2 col-form-label">Nombre</label>
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="form-group text-right">
-                                <a href="<?php echo base_url('users/index') ?>" class="btn btn-secondary">Regresar</a>
+                                <a href="<?php echo base_url('c_users/index') ?>" class="btn btn-secondary">Regresar</a>
                                 <input type="submit" value="Actualizar datos" class="btn btn-primary"
                                     id="update_profile">
                             </div>

@@ -1,47 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">UEPSE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Avisos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Encuesta</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Comité de Salud</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Nosotros
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="<?php echo base_url('welcome/aboutus');?>" class="dropdown-item"><i class="fas fa-info-circle"></i> Sobre nosotros</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-clipboard-list"></i> Programas</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-users"></i> Directorio</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="nav_services" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Más servicios
-                </a>
-                <div class="dropdown-menu" aria-labelledby="nav_services">
-                    <a class="dropdown-item" href="#">Trámites y servicios</a>
-                    <a class="dropdown-item" href="#">Contáctenos</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Marco jurídico</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"> </script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"> </script>
+    <!---Fontawesome--->
+    <script src="https://kit.fontawesome.com/8efbe29298.js" crossorigin="anonymous"></script>
+
+    <title>UEPSE</title>
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico'); ?>" type="image/x-icon">
+</head>
