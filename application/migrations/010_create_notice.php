@@ -17,11 +17,20 @@ class Migration_create_notice extends CI_Migration
             'notice_title' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '255',
-                'null' => FALSE,
+                'null' => false,
             ),
             'notice_content' => array(
                 'type' => 'LONGTEXT',
-                'null' => FALSE,
+                'null' => false,
+            ),
+            'place' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '255',
+                'null' => true
+            ),
+            'time' => array(
+                'type' => 'TIMESTAMP',
+                'null' => false,
             ),
         ));
         $this->dbforge->add_key('notice_id', true);
