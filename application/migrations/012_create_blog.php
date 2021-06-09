@@ -1,49 +1,41 @@
 <?php
 
 defined('BASEPATH') or exit('No direct script access allowed');
-
-class Migration_create_notice extends CI_Migration
+class Migration_create_blog extends CI_Migration
 {
-
     public function up()
     {
         $this->dbforge->add_field(array(
-            'notice_id' => array(
+            'blog_id' => array(
                 'type' => 'INT',
-                'constraint' => 5,
+                'constraint' => 10,
                 'unsigned' => true,
                 'auto_increment' => true,
             ),
-            'notice_title' => array(
+            'blog_title' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 400,
                 'null' => false,
             ),
-            'notice_content' => array(
+            'blog_content' => array(
                 'type' => 'LONGTEXT',
                 'null' => false,
             ),
-            'place' => array(
+            'published_by' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '255',
-                'null' => true
-            ),
-            'user' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '255',
-                'null' => false
+                'null' => false,
             ),
             'time' => array(
                 'type' => 'TIMESTAMP',
                 'null' => false,
             ),
         ));
-        $this->dbforge->add_key('notice_id', true);
-        $this->dbforge->create_table('notice');
+        $this->dbforge->add_key('blog_id', true);
+        $this->dbforge->create_table('blogs');
     }
-
     public function down()
     {
-        $this->dbforge->drop_table('notice');
+        $this->dbforge->drop_table('blogs');
     }
 }
