@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/8efbe29298.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/dashboard-style.css') ?>">
     <link rel="shortcut icon" href="<?php echo base_url('assets/img/favicon.ico'); ?>" type="image/x-icon">
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
     <style>
     .bd-placeholder-img {
         font-size: 1.125rem;
