@@ -1,5 +1,5 @@
 <body>
-    <main role="main" class="flex-shrink-0">
+    <main role="main" class="flex-shrink-0 vh-100">
         <div class="container">
             <div class="justify-content-center my-4">
                 <div class="card shadow-sm">

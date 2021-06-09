@@ -1,21 +1,38 @@
 <footer>
-    <div class="footer mt-auto py-3">
-        <div class="row">
-            <div class="col">
-                <h4 class="text-center">CONTÁCTENOS</h4>
-                <p class="text-center"><i class="fas fa-phone-square-alt"></i> 9-42-71-70 Ext. 56026,56230</p>
-            </div>
-            <div class="col">
-                <h4 class="text-center">UBICACIÓN</h4>
-                <p class="text-center"><i class="fas fa-map-marker-alt"></i> Calle 11 s/n x 4 y 8, Fracc. Prado
-                    Norte</p>
-            </div>
-            <div class="col text-center">
-                <h4 class="text-center">Google Maps</h4>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7449.393681913465!2d-89.597781!3d21.004786!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c06d4770745b183!2sCentro%20de%20Evaluaci%C3%B3n%20Educativa%20del%20Estado%20de%20Yucat%C3%A1n%20Edificio%20Paulo%20Freire!5e0!3m2!1ses-419!2sus!4v1618332236250!5m2!1ses-419!2sus"
-                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+    <div class="footer mt-auto py-3 h-100" style="background-color:#212121">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h5 class="text-white">UEPSE</h5>
+                    <img src="<?php echo base_url('assets/img/esc_armas_yuc.png') ?>" alt="escudo_yucatan"
+                        class="img-fluid text-center">
+                    <h6 class="text-center text-muted small">Derechos reservados</h6>
+                    <small class="text-muted" style="font-size:4px;">O.M</small>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-muted text-left">Información</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="<?php echo base_url('welcome/announcement')?>" class="text-muted">Avisos</a></li>
+                        <li><a href="<?php echo base_url('welcome/aboutus')?>" class="text-muted">Nosotros</a></li>
+                        <li><a href="<?php echo base_url('welcome/directory')?>" class="text-muted">Directorio</a></li>
+                        <li><a href="#" class="text-muted">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-muted text-left">Servicios</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="<?php echo base_url('welcome/services')?>" class="text-muted">Trámites</a></li>
+                        <li><a href="#" class="text-muted">Comité de Salud</a></li>
+                        <li><a href="<?php echo  base_url('welcome/survey')?>" class="text-muted">Encuesta</a></li>
+                        <li><a href="<?php echo base_url('login')?>" class="text-muted">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-muted text-left">REPASE</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="text-muted">Ingresar</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

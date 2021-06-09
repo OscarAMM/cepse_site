@@ -1,5 +1,5 @@
 <body>
-    <main role="main" class="flex-shrink-0">
+    <main role="main" class="flex-shrink-0 vh-100">
         <div class="container">
             <div class="justify-content-center">
                 <div class="row">
@@ -32,7 +32,7 @@
                                     <?php endforeach;?>
                                 </div>
                                 <?php else: ?>
-
+                                <h4 class="text-center">Aún no está disponible esta información. <i class="fas fa-search"></i></h4>
                                 <?php endif;?>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
                 <a class="nav-link" href="<?php echo base_url('welcome/index')?>">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Avisos</a>
+                <a class="nav-link" href="<?php echo base_url('welcome/announcement')?>">Avisos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('welcome/survey')?>">Encuesta</a>
@@ -22,11 +22,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Nosotros
+                    Información
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a href="<?php echo base_url('welcome/aboutus'); ?>" class="dropdown-item"><i
-                            class="fas fa-info-circle"></i> Sobre nosotros</a>
+                            class="fas fa-info-circle"></i> Nosotros</a>
                     <a class="dropdown-item" href="#"><i class="fas fa-clipboard-list"></i> Programas</a>
                     <a class="dropdown-item" href="<?php echo base_url('welcome/directory') ?>"><i
                             class="fas fa-users"></i> Directorio</a>
@@ -38,7 +38,7 @@
                     Más servicios
                 </a>
                 <div class="dropdown-menu" aria-labelledby="nav_services">
-                    <a class="dropdown-item" href="#">Trámites y servicios</a>
+                    <a class="dropdown-item" href="<?php echo base_url('welcome/services')?>">Trámites y servicios</a>
                     <a class="dropdown-item" href="#">Contáctenos</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Marco jurídico</a>
