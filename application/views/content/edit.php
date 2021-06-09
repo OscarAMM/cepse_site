@@ -94,4 +94,13 @@
         </div>
     </div>
 </div>
+<script>
+CKEDITOR.replace('paragraph_one');
+</script>
+<script>
+CKEDITOR.replace('paragraph_two');
+</script>
+<script>
+CKEDITOR.replace('paragraph_three');
+</script>
 <script src="<?php echo base_url('assets/js/content.js') ?>"></script>

@@ -70,3 +70,12 @@
         </div>
     </div>
 </div>
+<script>
+CKEDITOR.replace('objective_text');
+</script>
+<script>
+CKEDITOR.replace('mission_text');
+</script>
+<script>
+CKEDITOR.replace('vision_text');
+</script>
