@@ -28,7 +28,7 @@ class Migration_create_notice extends CI_Migration
                 'constraint' => '255',
                 'null' => true
             ),
-            'user' => array(
+            'published_by' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '255',
                 'null' => false
